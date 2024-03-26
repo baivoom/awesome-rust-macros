@@ -4,6 +4,11 @@ All credits to the authors
 
 List some useful and productive MACRO crates (Ordered randomly and means nothing)
 
+Crates
+
+(https://crates.io/categories/development-tools::procedural-macro-helpers)[https://crates.io/categories/development-tools::procedural-macro-helpers]
+
+
 ## Paste
 
 (https://github.com/dtolnay/paste)[https://github.com/dtolnay/paste]    
@@ -70,6 +75,57 @@ nest! {
     }
 }
 ```
+
+## Quote
+
+(https://github.com/dtolnay/quote)[https://github.com/dtolnay/quote]
+
+```rust
+let tokens = quote! {
+    struct SerializeWith #generics #where_clause {
+        value: &'a #field_ty,
+        phantom: core::marker::PhantomData<#item_ty>,
+    }
+
+    impl #generics serde::Serialize for SerializeWith #generics #where_clause {
+        fn serialize<S>(&self, serializer: S) -> Result<S::Ok, S::Error>
+        where
+            S: serde::Serializer,
+        {
+            #path(self.value, serializer)
+        }
+    }
+
+    SerializeWith {
+        value: #value,
+        phantom: core::marker::PhantomData::<#item_ty>,
+    }
+};
+```
+
+## Syn
+
+(github.com/dtolnay/syn)[github.com/dtolnay/syn]
+
+```rust
+use proc_macro::TokenStream;
+use quote::quote;
+use syn::{parse_macro_input, DeriveInput};
+
+#[proc_macro_derive(MyMacro)]
+pub fn my_macro(input: TokenStream) -> TokenStream {
+    // Parse the input tokens into a syntax tree
+    let input = parse_macro_input!(input as DeriveInput);
+
+    // Build the output, possibly using quasi-quotation
+    let expanded = quote! {
+        // ...
+    };
+
+    // Hand the output tokens back to the compiler
+    TokenStream::from(expanded)
+}```
+
 
 
 
