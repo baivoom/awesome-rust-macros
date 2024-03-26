@@ -11,7 +11,7 @@ Crates
 
 ## Paste
 
-(https://github.com/dtolnay/paste)[https://github.com/dtolnay/paste]    
+[https://github.com/dtolnay/paste]    (https://github.com/dtolnay/paste)
 
 ```rust
 use paste::paste;
@@ -59,7 +59,7 @@ fn call_some_getters(s: &S) -> bool {
 
 ## Nestify
 
-(https://github.com/snowfoxsh/nestify)[https://github.com/snowfoxsh/nestify]
+[https://github.com/snowfoxsh/nestify](https://github.com/snowfoxsh/nestify)
 
 ```rust
 nest! {
@@ -78,7 +78,7 @@ nest! {
 
 ## Quote
 
-(https://github.com/dtolnay/quote)[https://github.com/dtolnay/quote]
+[https://github.com/dtolnay/quote](https://github.com/dtolnay/quote)
 
 ```rust
 let tokens = quote! {
@@ -105,7 +105,7 @@ let tokens = quote! {
 
 ## Syn
 
-(github.com/dtolnay/syn)[github.com/dtolnay/syn]
+[github.com/dtolnay/syn](github.com/dtolnay/syn)
 
 ```rust
 use proc_macro::TokenStream;
