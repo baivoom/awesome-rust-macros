@@ -11,7 +11,7 @@ Crates
 
 ## Paste
 
-[https://github.com/dtolnay/paste]    (https://github.com/dtolnay/paste)
+[https://github.com/dtolnay/paste](https://github.com/dtolnay/paste)
 
 ```rust
 use paste::paste;
