@@ -57,7 +57,7 @@ fn call_some_getters(s: &S) -> bool {
 }
 ```
 
-## Nestify
+## Nestify - Nest struct declarations
 
 [https://github.com/snowfoxsh/nestify](https://github.com/snowfoxsh/nestify)
 
@@ -76,7 +76,7 @@ nest! {
 }
 ```
 
-## Quote
+## Quote - generate code for making procedural macro
 
 [https://github.com/dtolnay/quote](https://github.com/dtolnay/quote)
 
@@ -103,7 +103,7 @@ let tokens = quote! {
 };
 ```
 
-## Syn
+## Syn - parser for making procedural macro
 
 [github.com/dtolnay/syn](github.com/dtolnay/syn)
 
